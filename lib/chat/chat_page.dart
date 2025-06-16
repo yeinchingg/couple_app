@@ -40,7 +40,7 @@ class _ChatPageState extends State<ChatPage> {
                   alignment: Alignment.centerRight,
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 4),
-                    padding: EdgeInsets.all(12),
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: AppColors.Lgreen,
                       borderRadius: BorderRadius.circular(12),
