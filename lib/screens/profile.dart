@@ -3,7 +3,7 @@ import 'package:couple_app/theme/text_styles.dart';
 import 'package:couple_app/theme/color_styles.dart';
 import 'package:couple_app/chat/chat_page.dart';
 import 'package:couple_app/ widgets/navigate.dart';
-import 'package:couple_app/screens/calender.dart';
+import 'package:couple_app/screens/calendar.dart';
 import 'package:couple_app/screens/photo.dart';
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -18,10 +18,6 @@ class _ProfilePageState extends State<ProfilePage> {
   int _count = 0;
 
     void _onItemTapped(int index) {
-      if (index == _selectedIndex) return;
-    setState(() {
-      _selectedIndex = index;
-    });
       switch (index) {
         case 0:
           Navigator.pushReplacement(

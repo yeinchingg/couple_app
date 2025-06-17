@@ -1,7 +1,7 @@
 import 'package:couple_app/screens/photo.dart';
 import 'package:couple_app/screens/profile.dart';
 import 'package:flutter/material.dart';
-import 'screens/calender.dart';
+import 'screens/calendar.dart';
 
 void main() {
   runApp( const MyApp());

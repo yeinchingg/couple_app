@@ -3,7 +3,9 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:couple_app/theme/text_styles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-import 'profile.dart';
+import 'package:couple_app/screens/profile.dart';
+import 'package:couple_app/screens/photo.dart';
+import 'package:couple_app/ widgets/navigate.dart';
 
 class CalendarMemoPage extends StatefulWidget {
   const CalendarMemoPage({super.key});
@@ -15,11 +17,34 @@ class CalendarMemoPage extends StatefulWidget {
 class _CalendarMemoPageState extends State<CalendarMemoPage> {
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
+  int _selectedIndex = 0;
   final TextEditingController _memoController = TextEditingController();
 
   Map<String, String> _memoData = {}; // 儲存日期 -> 備忘錄文字
   Map<String, List<String>> _tagData = {}; // 儲存日期 -> 標籤清單
   Set<String> _selectedTags = {}; // 當天被選中的標籤集合
+  void _onItemTapped(int index) {
+    switch (index) {
+      case 0:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const CalendarMemoPage()),
+        );
+        break;
+      case 1:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const ProfilePage()),
+        );
+        break;
+      case 2:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const PhotoWallPage()),
+        );
+        break;
+    }
+  }
 
   @override
   void initState() {
@@ -218,6 +243,10 @@ class _CalendarMemoPageState extends State<CalendarMemoPage> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: CustomNavigationBar(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
     );
   }

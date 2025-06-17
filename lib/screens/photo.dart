@@ -3,7 +3,8 @@ import 'package:couple_app/theme/text_styles.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:couple_app/screens/profile.dart';
-
+import 'package:couple_app/screens/calendar.dart';
+import 'package:couple_app/ widgets/navigate.dart';
 
 class PhotoWallPage extends StatefulWidget {
     const PhotoWallPage({super.key});
@@ -14,7 +15,7 @@ class PhotoWallPage extends StatefulWidget {
 
 class _PhotoWallPageState extends State<PhotoWallPage> {
     final List<File> _photos = [];
-
+    int _selectedIndex = 0;
     Future<void> _pickImage() async {
         final picker = ImagePicker();
         final XFile? pickedImage = await picker.pickImage(source: ImageSource.gallery);
@@ -26,11 +27,34 @@ class _PhotoWallPageState extends State<PhotoWallPage> {
         }
     }
 
+    void _onItemTapped(int index) {
+        switch (index) {
+            case 0:
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => const CalendarMemoPage()),
+                );
+                break;
+            case 1:
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ProfilePage()),
+                );
+                break;
+            case 2:
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => const PhotoWallPage()),
+                );
+                break;
+        }
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-                title: Text('Photo Wall',style: headingStyle,),
+                title: Text('Photo Wall', style: headingStyle),
                 leading: IconButton(
                     icon: const Icon(Icons.arrow_back),
                     onPressed: () {
@@ -63,6 +87,10 @@ class _PhotoWallPageState extends State<PhotoWallPage> {
             floatingActionButton: FloatingActionButton(
                 onPressed: _pickImage,
                 child: const Icon(Icons.add),
+            ),
+            bottomNavigationBar: CustomNavigationBar(
+                selectedIndex: _selectedIndex,
+                onItemTapped: _onItemTapped,
             ),
         );
     }
