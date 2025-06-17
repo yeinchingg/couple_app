@@ -2,6 +2,8 @@ import 'dart:io';
 import 'package:couple_app/theme/text_styles.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:couple_app/screens/profile.dart';
+
 
 class PhotoWallPage extends StatefulWidget {
     const PhotoWallPage({super.key});
@@ -31,7 +33,11 @@ class _PhotoWallPageState extends State<PhotoWallPage> {
                 title: Text('Photo Wall',style: headingStyle,),
                 leading: IconButton(
                     icon: const Icon(Icons.arrow_back),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => const ProfilePage()),
+                        );
+                    },
                 ),
             ),
             body: Padding(
