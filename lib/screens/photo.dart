@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:couple_app/theme/text_styles.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class _PhotoWallPageState extends State<PhotoWallPage> {
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-                title: const Text('Photo Wall'),
+                title: Text('Photo Wall',style: headingStyle,),
                 leading: IconButton(
                     icon: const Icon(Icons.arrow_back),
                     onPressed: () => Navigator.of(context).pop(),

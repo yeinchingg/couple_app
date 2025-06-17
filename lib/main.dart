@@ -1,18 +1,23 @@
+import 'package:couple_app/screens/photo.dart';
+import 'package:couple_app/screens/profile.dart';
 import 'package:flutter/material.dart';
-import 'screens/photo.dart'; // 確保你有匯入 photo.dart
+import 'screens/calender.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({Key? key}) : super(key:key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PhotoWallPage(), // ✅ 正確的 widget 名稱
+      title: 'Couple App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: PhotoWallPage(),
     );
   }
 }
-
