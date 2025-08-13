@@ -1,16 +1,43 @@
 # couple_app
+專案名稱：Couple App
+簡介
+這是一個專為情侶設計的互動式 App，旨在幫助情侶們更輕鬆地分享生活點滴、紀錄珍貴時刻，並增進彼此的互動。本專案將常用的情侶互動功能整合在一個直觀的介面中，透過美觀的設計與互動體驗，讓兩人之間的連結更加緊密。
 
-A new Flutter project.
+專案特色
+多功能整合：整合日曆、聊天、相簿牆等多種核心功能，滿足情侶日常互動需求。
 
-## Getting Started
+互動式個人檔案：在個人檔案頁面設計了有趣的互動機制（例如：點擊愛心或圖片計數），提升使用者的參與感。
 
-This project is a starting point for a Flutter application.
+美觀的 UI/UX 設計：採用 Flutter 框架與自定義主題，打造一致且賞心悅目的視覺體驗。
 
-A few resources to get you started if this is your first Flutter project:
+跨平台支援：基於 Flutter 開發，可同時支援 iOS 與 Android 平台。
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+技術棧 (Tech Stack)
+前端框架：Flutter
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+程式語言：Dart
+
+依賴套件：
+
+lottie (如果你在其他頁面也用了 Lottie 動畫)
+
+audioplayers (如果你的 App 包含音效)
+
+功能列表
+已完成功能 ✅
+主頁（個人檔案）：顯示情侶交往天數，並具備互動點擊計數功能。
+
+導航列：底部導航列可切換至日曆、相簿牆與個人檔案頁面。
+
+聊天頁面：右上角提供快速進入聊天頁面的入口。
+
+視覺主題：實作自定義的文字樣式與顏色主題，使應用程式風格統一。
+
+未來規劃功能 💡
+日曆功能強化：讓使用者可以在日曆上新增、編輯與分享重要紀念日和行程。
+
+相簿牆功能完善：實現照片上傳、分享與按讚功能，並可自定義照片牆的排版。
+
+真實聊天系統：後續將整合後端服務，實現即時訊息傳送功能。
+
+帳號系統：開發使用者註冊、登入與配對功能，讓情侶可以綁定帳號。
