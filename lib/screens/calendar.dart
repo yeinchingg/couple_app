@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:couple_app/screens/profile.dart';
 import 'package:couple_app/screens/photo.dart';
-import 'package:couple_app/ widgets/navigate.dart';
+import 'package:couple_app/widgets/navigate.dart';
 
 class CalendarMemoPage extends StatefulWidget {
   const CalendarMemoPage({super.key});

@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:couple_app/screens/profile.dart';
 import 'package:couple_app/screens/calendar.dart';
-import 'package:couple_app/ widgets/navigate.dart';
+import 'package:couple_app/widgets/navigate.dart';
 
 class PhotoWallPage extends StatefulWidget {
     const PhotoWallPage({super.key});

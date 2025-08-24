@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:couple_app/theme/text_styles.dart';
 import 'package:couple_app/theme/color_styles.dart';
-import 'package:couple_app/chat/chat_page.dart';
-import 'package:couple_app/ widgets/navigate.dart';
+import 'package:couple_app/screens/chat_page.dart';
+import 'package:couple_app/widgets/navigate.dart';
 import 'package:couple_app/screens/calendar.dart';
 import 'package:couple_app/screens/photo.dart';
 class ProfilePage extends StatefulWidget {
